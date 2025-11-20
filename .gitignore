@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+meme-generator.sif
+.env
+

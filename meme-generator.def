@@ -1,0 +1,30 @@
+Bootstrap: docker
+From: python:3.11-slim
+
+%labels
+    Author UVA SDS Huda Mohmand
+    Version 1.0
+
+%environment
+    export FLASK_APP=/app/app.py
+    export FLASK_ENV=development
+
+%post
+    # Create app directory
+    mkdir -p /app
+    cd /app
+
+    # Install dependencies
+    pip install --upgrade pip
+    pip install flask pillow azure-storage-blob python-dotenv
+
+%files
+    ./app.py /app/app.py
+    ./requirements.txt /app/requirements.txt
+    ./.env /app/.env
+
+%runscript
+    echo "Starting Meme Generator..."
+    cd /app
+    python3 app.py
+

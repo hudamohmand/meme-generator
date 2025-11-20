@@ -1,0 +1,5 @@
+Flask==2.3.2
+azure-storage-blob==12.26.0
+pillow==10.1.0
+python-dotenv==1.0.0
+
