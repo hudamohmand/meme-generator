@@ -7,7 +7,7 @@
 ## 2) System Overview
 **Course Concept:** Azure Blob Storage + Flask API.  
 **Architecture Diagram:** See `/assets/architecture.png`.
-
+I also have screenshots to show that my project works in assets!
 
 **Data / Services:**
 - Images: PNG/JPG files uploaded by users.
@@ -18,8 +18,11 @@
 **Apptainer:**
 
 ```bash
-module load apptainer/1.3.4
-apptainer build meme-generator.sif meme-generator.def
-apptainer run --bind /home/$USER:/home/$USER meme-generator.sif
+Apptainer
 
-**Then when you run all of that after you open the link in a browser, make sure to add the word 'upload' to the end of the link so you can see the correct form to the meme generator.**
+
+module load apptainer/1.3.4
+apptainer run --bind /home/$USER:/home/$USER /home/grh2uv/meme-generator/meme-generator.sif
+
+
+##Then when you run all of that after you open the link in a browser, make sure to add the word 'upload' to the end of the link so you can see the correct form to the meme generator.
