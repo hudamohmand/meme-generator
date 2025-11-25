@@ -14,7 +14,28 @@ I also have screenshots to show that my project works in assets!
 - Text overlays: Added via PIL.
 - Storage: Azure Blob `images-demo` container (public-read).
 
-## 3) How to Run (Local)
+## 3) How to Run (Docker + Apptainer)
+
+**If using Rivanna use apptainer, if using Cursor/terminal use Docker**
+
+**NOTE: This project only supports .jpg images only**
+
+**Docker:**
+- Must have Docker installed and Docker running 
+- Clone the repository:
+```bash
+git clone https://github.com/hudamohmand/meme-generator.git
+cd meme-generator
+#Create a file named .env in the project root and add:
+AZURE_CONNECTION_STRING=PASTE_YOUR_OWN_HERE
+AZURE_CONTAINER_NAME=images-demo
+#Then copy and paste in terminal:
+docker build -t meme-generator .
+docker run -p 5000:5000 --env-file .env meme-generator
+#Go to http://127.0.0.1:5000 and add /upload to the end of the link to open to app in your broswer and upload a meme
+
+
+
 **Apptainer:**
 
 ```bash
