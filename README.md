@@ -4,6 +4,9 @@
 **Problem:** The problem my project is solving is not having access to a website that generates and creates quick simple memes for you out of any pictures and text you want.  
 **Solution:** A Flask API that I have created lets users upload whatever picture they want as well as add any text that they want to the picture. Then when you upload the meme, my meme generator will output the very simple and quick meme for you to use. My project can be run through Apptainer with exactly what you need to run it properly given below in the README. You can copy and run that text in a terminal for the link to be given to you, when you click on the link an open it in a browser, at the end of the URL you will need to add the word 'upload' and then when you click enter the meme generator will be there for you to use.
 
+NOTE: This project requires an Azure Storage Account. For security reasons, the Azure connection key is NOT included in the repository.
+To run the project, users must create a .env file locally with their own azure connection string.
+
 ## 2) System Overview
 **Course Concept:** Azure Blob Storage + Flask API.  
 **Architecture Diagram:** See `/assets/architecture.png`.
